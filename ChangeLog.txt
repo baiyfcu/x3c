@@ -1,5 +1,13 @@
 x3c - C++ Plugin Framework
 
+2020-03-21
+
+    * has_map to unordered_map.
+    * In linux os, MakeFile delete prefix 'lib'.
+    * Include some head file.
+    * Compile x3c on WIN32 WIN64 platform(Win2008, VC++ 2008, VC++2010, VC++2017).
+	* Compile x3c on ubuntu18.04.
+	
 2011-11-08
 
     * Add GetLogObserver() export function in LogWriter.plugin

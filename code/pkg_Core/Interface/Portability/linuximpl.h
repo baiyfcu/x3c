@@ -10,6 +10,7 @@
 #include <dlfcn.h>
 #include <stdio.h>
 #include <sys/syscall.h>    // for SYS_xxx definitions
+#include <unistd.h>
 
 #define W2A(wstr)   x3::w2a(wstr).c_str()
 
@@ -45,7 +46,6 @@ HMODULE LoadLibraryW(const wchar_t* filename)
 
     std::string name(x3::w2a(filename));
     HMODULE hdll = dlopen(name.c_str(), RTLD_LAZY);
-
     seterr(dlerror());
     if (!hdll)
     {

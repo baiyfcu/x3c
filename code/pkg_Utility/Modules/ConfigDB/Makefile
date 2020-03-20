@@ -11,7 +11,7 @@ all:
 	$(CC) $(CFLAGS_SO) -c  Cx_CfgRecord.cpp
 	$(CC) $(CFLAGS_SO) -c  Cx_ConfigFactory.cpp
 	$(CC) $(CFLAGS_SO) -c  Module.cpp
-	$(CC) $(C_FLAGS_SO) -o $(PLUGINS_DIR)/libTextUtility.so *.o
+	$(CC) $(C_FLAGS_SO) -o $(PLUGINS_DIR)/TextUtility.so *.o
 clean:
 	rm -rf *.so
 	rm -rf *.o

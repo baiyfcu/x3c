@@ -9,7 +9,7 @@ all:
 	$(CC) $(CFLAGS_SO) -c  CmdObserver.cpp
 	$(CC) $(CFLAGS_SO) -c  WndA.cpp
 	$(CC) $(CFLAGS_SO) -c  Module.cpp
-	$(CC) $(C_FLAGS_SO) -o $(PLUGINS_DIR)/libHelloView.so *.o
+	$(CC) $(C_FLAGS_SO) -o $(PLUGINS_DIR)/HelloView.so *.o
 clean:
 	rm -rf *.so
 	rm -rf *.o

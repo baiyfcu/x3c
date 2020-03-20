@@ -47,7 +47,7 @@ all:
 	$(CC) $(CFLAGS_SO) -c  log4cplus/src/syslogappender.cxx
 	$(CC) $(CFLAGS_SO) -c  log4cplus/src/threads.cxx
 	$(CC) $(CFLAGS_SO) -c  log4cplus/src/timehelper.cxx
-	$(CC) $(C_FLAGS_SO) -o $(PLUGINS_DIR)/libLogWriter.so *.o $(LIBS) -lwinsock
+	$(CC) $(C_FLAGS_SO) -o $(PLUGINS_DIR)/LogWriter.so *.o $(LIBS) -lwinsock
 clean:
 	rm -rf *.so
 	rm -rf *.o

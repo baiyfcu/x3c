@@ -8,7 +8,7 @@ all:
 	$(CC) $(CFLAGS_SO) -c  Cx_Example.cpp
 	$(CC) $(CFLAGS_SO) -c  Plugin.cpp
 	$(CC) $(CFLAGS_SO) -c  Module.cpp
-	$(CC) $(C_FLAGS_SO) -o $(PLUGINS_DIR)/libWin32DllTempl.so *.o
+	$(CC) $(C_FLAGS_SO) -o $(PLUGINS_DIR)/Win32DllTempl.so *.o
 clean:
 	rm -rf *.so
 	rm -rf *.o

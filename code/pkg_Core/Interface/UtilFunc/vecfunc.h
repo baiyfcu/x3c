@@ -11,6 +11,10 @@
 #pragma warning(disable:4018)   // signed/unsigned mismatch
 #pragma warning(disable:4702)   // unreachable code
 #endif
+
+#undef max
+#undef min
+ 
 #include <algorithm>
 #include <string>
 #include <vector>
@@ -18,6 +22,8 @@
 #include <list>
 #include <map>
 #include <sstream>
+#include <functional>
+
 #ifdef _MSC_VER                 // hide warnings
 #pragma warning (pop)
 #endif

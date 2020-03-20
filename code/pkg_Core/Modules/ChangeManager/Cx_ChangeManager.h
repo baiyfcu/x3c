@@ -8,10 +8,13 @@
 #define _X3_CORE_CHANGEMANAGER_H
 
 #include <ChangeObserver/Ix_ChangeManager.h>
+#include <unordered_map>
+
 
 #if defined(_MSC_VER) && _MSC_VER > 1200    // not VC6
-    #include <hash_map>
-    using stdext::hash_multimap;
+    //#include <hash_map>
+    //using stdext::hash_multimap;
+    #include <unordered_map>
 /*
 #elif defined(__GNUC__)                     // gcc
     #include <hash_map>
@@ -46,7 +49,7 @@ private:
     virtual void ChangeNotify(const char* type, ChangeNotifyData* data);
 
 private:
-    typedef hash_multimap<std::string, Ix_ChangeObserver*> ObserverMap;
+    typedef std::unordered_map<std::string, Ix_ChangeObserver*> ObserverMap;
     typedef std::pair<std::string, Ix_ChangeObserver*> ObserverPair;
     typedef ObserverMap::iterator MAP_IT;
     ObserverMap     m_observers;

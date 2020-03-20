@@ -32,7 +32,7 @@
 #include <algorithm>
 #include <vector>
 #include <cstdlib>
-
+#include <functional>
 
 namespace log4cplus
 {

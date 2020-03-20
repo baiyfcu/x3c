@@ -7,7 +7,7 @@ CFLAGS_SO   +=   -I$(INCLUDE_DIR)/pkg_Platform/Interface
 all:
 	$(CC) $(CFLAGS_SO) -c  Cx_HookManager.cpp
 	$(CC) $(CFLAGS_SO) -c  Module.cpp
-	$(CC) $(C_FLAGS_SO) -o $(PLUGINS_DIR)/libHookManager.so *.o
+	$(CC) $(C_FLAGS_SO) -o $(PLUGINS_DIR)/HookManager.so *.o
 clean:
 	rm -rf *.so
 	rm -rf *.o

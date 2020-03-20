@@ -15,7 +15,7 @@ static void Test();
 int main()
 {
     LoadDllHelper dll (NULL, &g_hPluginDll);
-
+#ifdef WIN32
     if (dll.Load(L"../plugins/Win32DllTempl.plugin" PLNEXT))
     {
         Test();
@@ -24,7 +24,16 @@ int main()
     {
         Test();
     }
-
+#else
+    if (dll.Load(L"../plugins/Win32DllTempl" PLNEXT))
+    {
+        Test();
+    }
+    if (dll.Load(L"../plugins/MFCExtTempl" PLNEXT))
+    {
+        Test();
+    }
+#endif
     return 0;
 }
 

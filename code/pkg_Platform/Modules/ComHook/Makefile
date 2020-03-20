@@ -9,7 +9,7 @@ all:
 	$(CC) $(CFLAGS_SO) -c  ComCreator.cpp
 	$(CC) $(CFLAGS_SO) -c  ComFileMap.cpp
 	$(CC) $(CFLAGS_SO) -c  Module.cpp
-	$(CC) $(C_FLAGS_SO) -o $(PLUGINS_DIR)/libComHook.so *.o
+	$(CC) $(C_FLAGS_SO) -o $(PLUGINS_DIR)/ComHook.so *.o
 clean:
 	rm -rf *.so
 	rm -rf *.o

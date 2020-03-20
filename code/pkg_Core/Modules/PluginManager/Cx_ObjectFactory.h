@@ -5,10 +5,12 @@
 #include <Module/XClassItem.h>
 #include <Module/Ix_Module.h>
 #include <Ix_ObjectFactory.h>
+#include <unordered_map>
 
 #if defined(_MSC_VER) && _MSC_VER > 1200    // not VC6
-    #include <hash_map>
-    using stdext::hash_map;
+    //#include <hash_map>
+    //using stdext::hash_map;
+    #include <unordered_map>
 /*
 #elif defined(__GNUC__)                     // gcc
     #include <ext/hash_map>
@@ -44,7 +46,7 @@ public:
 protected:
     typedef std::vector<X3CLSID>         CLSIDS;
     typedef std::pair<X3CLASSENTRY, long>  MAPITEM;     //!< entry+moduleIndex
-    typedef hash_map<std::string, MAPITEM>    CLSMAP;   //!< clsid+item
+    typedef std::unordered_map<std::string, MAPITEM>    CLSMAP;   //!< clsid+item
 
     struct MODULE                       //!< plugin module info
     {
